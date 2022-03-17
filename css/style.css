@@ -1,1 +1,208 @@
+/*Common CSS*/
+:root {
+  --AngloDarkBlue: #002776;
+  --AngloLightBlue: #0075B0;
+  --ProfilePictureOrange: #DA532C;
+  --white: #ffffff;
+  --black: #000000;
+  --fillSolid: #D8D8D8;
+  --contentGrey: #434343;
+  --linkRed: #C60C30;
+}
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-weight: 400;
+}
+.left-sidebar,
+.header-right {
+  justify-content: center;
+}
+@media (min-width: 769px) {
+  .left-sidebar {
+    max-width: 240px;
+  }
+}
 
+h1 {
+  font-size: 25px;
+  line-height: 33px;
+  margin-bottom: 19px;
+  color: var(--AngloDarkBlue);
+}
+
+/*Overwrite CSS*/
+.container {
+  width: 100%;
+  max-width: 1440px;
+}
+.btn-secondary {
+  background-color: #0075B0;
+}
+.slick-prev {
+  left: -15px
+}
+.slick-next {
+  right: -15px;
+}
+
+/*Header CSS*/
+header {
+}
+header .container {
+  background-color: var(--AngloDarkBlue);
+  padding-top: 15px;
+  padding-bottom: 16px;
+}
+.finance-label {
+  font-size: 15px;
+  line-height: 20px;
+  color: var(--white);
+  max-width: 213px;
+  justify-content: center;
+}
+.search-bar .input-group {
+  justify-content: center;
+}
+.top-search {
+  width: 38px;
+  height: 38px;
+  display: inline-flex;
+  justify-content: center;
+  background-color: var(--white);
+  background-image: url('../images/search.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 4px 0 0 4px;
+}
+.controls-bar {
+  max-width: 250px;
+  justify-content: center;
+}
+.controls-bar ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+.controls-bar ul li {
+  position: relative;
+}
+.controls-bar a {
+  color: var(--white);
+}
+.controls-bar a:hover {
+  text-decoration: none;
+}
+.notification-count {
+  background-color: var(--linkRed);
+  width: 22px;
+  height: 22px;
+  display: flex;
+  position: absolute;
+  top: -4px;
+  right: -15px;
+  justify-content: center;
+  color: var(--white);
+  border-radius: 50px;
+}
+.document-owner {
+  display: grid;
+  max-width: 95px;
+  background-color: var(--ProfilePictureOrange);
+  text-align: center;
+  border-radius: 4px;
+  font-size: 11px;
+  line-height: 15px;
+  letter-spacing: 0.07px;
+  padding: 2px 20px;
+}
+/*Main Content CSS*/
+section {
+  padding-top: 30px;
+}
+section .left-sidebar {
+  box-shadow: rgba(0,0,0,0.18);
+  min-height: calc(100vh - 101px);
+}
+.menu-container {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  flex-direction: column;
+}
+.menu-container .menu-items {
+  padding: 15px 0 15px 45px;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 20px;
+  background-repeat: no-repeat;
+  background-position: left 5px center;
+}
+.menu-home {
+  background-image: url('../images/home-filled.png');
+}
+.menu-items.create {
+  padding-left: 0;
+}
+.menu-container .menu-items a {
+  display: flex;
+}
+.menu-container .menu-items a:hover {
+  text-decoration: none;
+}
+.menu-items.create a {
+  display: flex;
+  padding: 10px 40px;
+  width: 100%;
+  max-width: 159px;
+  background-color: var(--AngloDarkBlue);
+  color: var(--white);
+}
+.menu-items.create a:before {
+  content:'';
+  display: flex;
+  width: 20px;
+  height: 20px;
+  background-image: url('../images/add.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 15px;
+}
+.menu-docs {
+  background-image: url('../images/folder-shared.png');
+}
+.menu-latest-docs {
+  background-image: url('../images/latest-documents.png');
+}
+.menu-recent-updates {
+  background-image: url('../images/recent-updates.png');
+}
+.menu-my-tasks {
+  background-image: url('../images/my-task.png');
+}
+
+
+/*Main Content CSS*/
+.main-content {
+  max-width: calc(100% - 240px);
+}
+.top-ribbon {
+  background-color: #0075B0;
+}
+.home-slider {
+}
+.my-calendar span {
+  height: 40px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: var(--white);
+  font-size: 15px;
+  line-height: 20px;
+}
+.home-slider .item {
+  min-height: 225px;
+  background-color: #002776;
+}
