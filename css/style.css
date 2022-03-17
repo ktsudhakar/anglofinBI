@@ -13,6 +13,7 @@
 body {
   font-family: "Segoe UI", Arial, sans-serif;
   font-weight: 400;
+  line-height: normal;
 }
 .material-icons {
   font-size: 20px;
@@ -41,13 +42,36 @@ h2 {
   color: var(--AngloDarkBlue);
   margin-bottom: 20px;
 }
+
+h3 {
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
 /*Overwrite CSS*/
 .container {
   width: 100%;
   max-width: 1440px;
 }
-.btn-secondary {
-  background-color: #0075B0;
+.btn-primary {
+  background-color: var(--AngloLightBlue);
+  border: 1px solid transparent;
+  transition: all ease 0.5s;
+}
+.btn-primary:hover {
+  background-color: var(--AngloLightBlue);
+  border: 1px solid var(--outlineBlue);
+}
+.form-control {
+  border-color: var(--outlineBlue);
+}
+.form-control:hover,
+.form-control:focus,
+.btn:focus {
+  outline: none;
+  box-shadow: none;
+  border-color: var(--outlineBlue);
 }
 .slick-prev {
   left: -15px
@@ -55,7 +79,10 @@ h2 {
 .slick-next {
   right: -15px;
 }
-
+ul {
+  padding: 0;
+  margin: 0;
+}
 /*Header CSS*/
 header {
 }
@@ -68,11 +95,53 @@ header .container {
   font-size: 15px;
   line-height: 20px;
   color: var(--white);
-  max-width: 213px;
   justify-content: center;
 }
-.search-bar .input-group {
-  justify-content: center;
+@media (min-width: 991px) {
+  .finance-label {
+    max-width: 213px;
+  }
+  .search-bar {
+    max-width: 718px;
+  }
+  .has-search {
+    max-width: 303px;
+  }
+  .controls-bar {
+    max-width: 250px;
+  }
+}
+.has-search {
+  width: 100%;
+}
+.has-search input {
+  border-radius: 0;
+  border-left: 0;
+  border-right: 0;
+}
+.search-bar select {
+  appearance: none;
+  max-width: 266px;
+}
+@media (min-width: 1440px) {
+  .search-bar select {
+    width: 100% !important;
+  }
+}
+.select-arrow {
+  position: relative;
+  margin-left: -30px;
+  display: flex;
+  align-items: center;
+  z-index: 9999;
+  width: 30px;
+  cursor: default;
+  user-select: none;
+  color: var(--black);
+}
+.input-group-append,
+.input-group-append .btn {
+  width: 119px;
 }
 .top-search {
   width: 38px;
@@ -83,10 +152,13 @@ header .container {
   color: var(--AngloLightBlue);
   justify-content: center;
   background-color: var(--white);
+  border: 1px solid var(--outlineBlue);
+  border-right: none;
   border-radius: 4px 0 0 4px;
+  cursor: default;
+  user-select: none;
 }
 .controls-bar {
-  max-width: 250px;
   justify-content: center;
 }
 .controls-bar ul {
@@ -94,13 +166,12 @@ header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0;
-  padding: 0;
 }
 .controls-bar ul li {
   position: relative;
 }
 .controls-bar a {
+  display: flex;
   color: var(--white);
 }
 .controls-bar i, .controls-bar .help {
@@ -139,7 +210,11 @@ section {
 }
 section .left-sidebar {
   box-shadow: rgba(0,0,0,0.18);
-  min-height: calc(100vh - 101px);
+}
+@media (min-width: 991px) {
+  section .left-sidebar {
+    min-height: calc(100vh - 101px);
+  }
 }
 .menu-container {
   list-style-type: none;
@@ -176,8 +251,10 @@ section .left-sidebar {
 }
 
 /*Main Content CSS*/
-.main-content {
-  max-width: calc(100% - 240px);
+@media (min-width: 991px) {
+  .main-content {
+    max-width: calc(100% - 240px);
+  }
 }
 .top-ribbon {
   background-color: #0075B0;
@@ -205,4 +282,68 @@ section .left-sidebar {
 .home-slider .item {
   min-height: 225px;
   background-color: #002776;
+}
+
+/*Recent Document Section*/
+.recent-document-wrapper {
+  margin-bottom: 38px;
+}
+.recent-document-wrapper ul {
+  list-style-type: none;
+}
+.recent-document-wrapper li a {
+  margin-bottom: 20px;
+  color: var(--AngloLightBlue);
+  font-size: 10px;
+  display: inline-flex;
+  line-height: 12px;
+}
+.recent-document-wrapper li a span {
+  display: inline-flex;
+  min-width: 145px;
+}
+
+/*Performance Fillbox Section*/
+.performance-wrapper {
+  margin-bottom: 30px;
+}
+
+.fill-block {
+  background-color: var(--fillSolid);
+  min-height: 244px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*Helpdesk Section*/
+.helpdesk-wrapper {
+  font-family: Helvetica, sans-serif;
+  color: var(--contentGrey);
+  margin-bottom: 40px;
+}
+.verify-icon {
+  max-width: 44px;
+  padding-right: 4px;
+  color: var(--AngloDarkBlue);
+}
+.user-block-content {
+  max-width: 297px;
+}
+.helpdesk-wrapper h3 {
+  position: relative;
+}
+.helpdesk-wrapper p {
+  font-size: 12px;
+  line-height: 14px;
+}
+.helpdesk-wrapper a {
+  text-transform: uppercase;
+  min-width: 185px;
+  color: var(--linkRed);
+}
+.helpdesk-wrapper h3 i {
+  position: absolute;
+  right: 0;
 }

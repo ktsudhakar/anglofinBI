@@ -19,7 +19,6 @@
     <title>AngloAmerican</title>
   </head>
   <body>
-
     <!--Header-->
     <header>
       <div class="container">
@@ -32,25 +31,26 @@
           </div>
           <div class="col header-right">
               <div class="row">
-                <div class="col finance-label">Finance BI<br/> Data Management Solution</div>
+                <div class="col-3 finance-label">Finance BI<br/> Data Management Solution</div>
                 <div class="col search-bar">
-                  <div class="input-group">
-                    <div class="form-group has-search mb-0 d-flex">
+                  <div class="input-group row m-0">
+                    <div class="form-group col-6 has-search mb-0 p-0 d-flex">
                       <i class="material-icons top-search">search</i>
-                      <input type="text" class="form-control rounded-0" placeholder="Search">
+                      <input type="text" class="form-control" placeholder="Enter your search here">
                     </div>
-                    <select class="custom-select" id="search">
-                      <option selected="">Choose...</option>
+                    <select class="col-6 form-control" id="search">
+                      <option value ="" disabled selected>Refine your search</option>
                       <option value="1">One</option>
                       <option value="2">Two</option>
                       <option value="3">Three</option>
                     </select>
-                    <div class="input-group-append">
-                      <button class="btn btn-secondary" type="button">Search</button>
+                    <span class="select-arrow"><i class="material-icons">keyboard_arrow_down</i></span>
+                    <div class="col p-0 input-group-append">
+                      <button class="btn btn-primary" type="button">Search</button>
                     </div>
                   </div>
                 </div>
-                <div class="col controls-bar">
+                <div class="col-3 controls-bar">
                   <ul>
                     <li><a href="javascript:void(0);"><i class="material-icons">notifications</i></a><span class="notification-count">4</span></li>
                     <li><a href="javascript:void(0);"><i class="material-icons">settings</i></a></li>
@@ -105,10 +105,73 @@
               <!--Most Recent Documents-->
               <div class="recent-document-wrapper">
                 <div class="row">
-                  <div class="col-md-6">
-                    <h3></h3>
+                  <div class="col-md-8">
+                    <h2>Most Recent Documents</h2>
+                    <ul>
+                      <li><a href="javascript:void(0);">Desktop procedure document name.ext</a></li>
+                      <li><a href="javascript:void(0);">Desktop procedure document name.ext</a></li>
+                      <li><a href="javascript:void(0);">Desktop procedure document name.ext</a></li>
+                      <li><a href="javascript:void(0);">Desktop procedure document name.ext</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-md-4">
+                    <h2>Recently Viewed</h2>
+                    <ul>
+                      <li><a href="javascript:void(0);"><span>Document link here</span><i class="material-icons">launch</i></a></li>
+                      <li><a href="javascript:void(0);"><span>Document folder link here</span><i class="material-icons">launch</i></a></li>
+                      <li><a href="javascript:void(0);"><span>Document link here</span><i class="material-icons">launch</i></a></li>
+                      <li><a href="javascript:void(0);"><span>Document link here</span><i class="material-icons">launch</i></a></li>
+                    </ul>
                   </div>
                 </div>
+            </div>
+
+            <!--Performance Section-->
+            <div class="performance-wrapper">
+              <div class="row align-items-end">
+                <div class="col-md-6">
+                  <h2>Most Recent Documents</h2>
+                  <div class="fill-block">
+                    <h2>Finance Dashboard</h2>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="fill-block">
+                    <h2>Invoice Analysts</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--Helpdesk Section-->
+            <div class="helpdesk-wrapper">
+              <h2>Help Desk</h2>
+              <div class="row align-items-end">
+                <div class="col-md-6">
+                  <div class="verified-user-block">
+                    <div class="row">
+                      <i class="col material-icons verify-icon">verified_user</i>
+                      <div class="col user-block-content">
+                        <h3>Learning and Development</h3>
+                        <p>Click on the link below for access to your current training curriculum and find out which eLearning's you have left to complete.</p>
+                          <h3><a href="javascript:void(0);"><span>SAP SUCCESS FACTORS</span><i class="material-icons">launch</i></a></h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="verified-user-block">
+                    <div class="row">
+                      <i class="col material-icons verify-icon">verified_user</i>
+                      <div class="col user-block-content">
+                        <h3>IT Services</h3>
+                        <p>Click on the link below to request assistance or to flag an issue with our IT specialists.</p>
+                          <h3><a href="javascript:void(0);"><span>IT SERVICES</span><i class="material-icons">launch</i></a></h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
