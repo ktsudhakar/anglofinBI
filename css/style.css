@@ -8,10 +8,14 @@
   --fillSolid: #D8D8D8;
   --contentGrey: #434343;
   --linkRed: #C60C30;
+  --outlineBlue: #93A7B2;
 }
 body {
   font-family: "Segoe UI", Arial, sans-serif;
   font-weight: 400;
+}
+.material-icons {
+  font-size: 20px;
 }
 .left-sidebar,
 .header-right {
@@ -25,11 +29,18 @@ body {
 
 h1 {
   font-size: 25px;
+  font-weight: 700;
   line-height: 33px;
   margin-bottom: 19px;
   color: var(--AngloDarkBlue);
 }
 
+h2 {
+  font-size: 20px;
+  line-height: 27px;
+  color: var(--AngloDarkBlue);
+  margin-bottom: 20px;
+}
 /*Overwrite CSS*/
 .container {
   width: 100%;
@@ -67,11 +78,11 @@ header .container {
   width: 38px;
   height: 38px;
   display: inline-flex;
+  align-items: center;
+  font-size: 20px;
+  color: var(--AngloLightBlue);
   justify-content: center;
   background-color: var(--white);
-  background-image: url('../images/search.png');
-  background-position: center;
-  background-repeat: no-repeat;
   border-radius: 4px 0 0 4px;
 }
 .controls-bar {
@@ -82,6 +93,7 @@ header .container {
   list-style-type: none;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin: 0;
   padding: 0;
 }
@@ -90,6 +102,9 @@ header .container {
 }
 .controls-bar a {
   color: var(--white);
+}
+.controls-bar i, .controls-bar .help {
+  font-size: 27px;
 }
 .controls-bar a:hover {
   text-decoration: none;
@@ -101,7 +116,8 @@ header .container {
   display: flex;
   position: absolute;
   top: -4px;
-  right: -15px;
+  right: -12px;
+  z-index: 10;
   justify-content: center;
   color: var(--white);
   border-radius: 50px;
@@ -133,18 +149,10 @@ section .left-sidebar {
   flex-direction: column;
 }
 .menu-container .menu-items {
-  padding: 15px 0 15px 45px;
+  padding: 15px 0;
   font-size: 15px;
   font-weight: 500;
   line-height: 20px;
-  background-repeat: no-repeat;
-  background-position: left 5px center;
-}
-.menu-home {
-  background-image: url('../images/home-filled.png');
-}
-.menu-items.create {
-  padding-left: 0;
 }
 .menu-container .menu-items a {
   display: flex;
@@ -160,29 +168,12 @@ section .left-sidebar {
   background-color: var(--AngloDarkBlue);
   color: var(--white);
 }
-.menu-items.create a:before {
-  content:'';
-  display: flex;
-  width: 20px;
-  height: 20px;
-  background-image: url('../images/add.png');
-  background-repeat: no-repeat;
-  background-position: center;
+.menu-items a > i {
+  margin-right: 22px;
+}
+.menu-items.create i {
   margin-right: 15px;
 }
-.menu-docs {
-  background-image: url('../images/folder-shared.png');
-}
-.menu-latest-docs {
-  background-image: url('../images/latest-documents.png');
-}
-.menu-recent-updates {
-  background-image: url('../images/recent-updates.png');
-}
-.menu-my-tasks {
-  background-image: url('../images/my-task.png');
-}
-
 
 /*Main Content CSS*/
 .main-content {
@@ -193,14 +184,23 @@ section .left-sidebar {
 }
 .home-slider {
 }
-.my-calendar span {
+.my-calendar {
   height: 40px;
-  display: flex;
+  display: inline-flex;
   justify-content: flex-end;
   align-items: center;
   color: var(--white);
   font-size: 15px;
   line-height: 20px;
+  margin-right: 5px;
+  cursor: pointer;
+  user-select: none;
+}
+.my-calendar i:first-child {
+  margin-right: 16px;
+}
+.my-calendar i:last-child {
+  margin-left: 16px;
 }
 .home-slider .item {
   min-height: 225px;
