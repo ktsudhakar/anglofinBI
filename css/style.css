@@ -9,6 +9,9 @@
   --contentGrey: #434343;
   --linkRed: #C60C30;
   --outlineBlue: #93A7B2;
+  --inputBoxFill: #E1DFDD;
+  --tableBorder: #979797;
+  --tableHeader: #373737;
 }
 body {
   font-family: "Segoe UI", Arial, sans-serif;
@@ -17,9 +20,9 @@ body {
 }
 .material-icons {
   font-size: 20px;
-}
-.left-sidebar,
-.header-right {
+  width: 25px;
+  display: flex;
+  align-items: center;
   justify-content: center;
 }
 @media (min-width: 769px) {
@@ -27,10 +30,11 @@ body {
     max-width: 240px;
   }
 }
-
+.color-dak-blue {
+  color: var(--AngloDarkBlue);
+}
 h1 {
   font-size: 25px;
-  font-weight: 700;
   line-height: 33px;
   margin-bottom: 19px;
   color: var(--AngloDarkBlue);
@@ -49,6 +53,9 @@ h3 {
   font-weight: 700;
   margin-bottom: 15px;
 }
+.mt-30 {
+  margin-top: 30px;
+}
 /*Overwrite CSS*/
 .container {
   width: 100%;
@@ -65,6 +72,7 @@ h3 {
 }
 .form-control {
   border-color: var(--outlineBlue);
+  height: 33px;
 }
 .form-control:hover,
 .form-control:focus,
@@ -83,9 +91,10 @@ ul {
   padding: 0;
   margin: 0;
 }
-/*Header CSS*/
-header {
+select.form-control:not([size]):not([multiple]) {
+  height: calc(2.25rem + 4px);
 }
+/*Header CSS*/
 header .container {
   background-color: var(--AngloDarkBlue);
   padding-top: 15px;
@@ -119,9 +128,16 @@ header .container {
   border-left: 0;
   border-right: 0;
 }
+.search-bar {
+  display: flex;
+  align-items: center;
+}
 .search-bar select {
   appearance: none;
   max-width: 266px;
+}
+.search-bar select.form-control:not([size]):not([multiple]) {
+  height: calc(2.25rem + -3px);
 }
 @media (min-width: 1440px) {
   .search-bar select {
@@ -138,14 +154,16 @@ header .container {
   cursor: default;
   user-select: none;
   color: var(--black);
+  pointer-events: none;
 }
 .input-group-append,
 .input-group-append .btn {
   width: 119px;
+  height: 33px;
 }
 .top-search {
   width: 38px;
-  height: 38px;
+  height: 33px;
   display: inline-flex;
   align-items: center;
   font-size: 20px;
@@ -159,13 +177,15 @@ header .container {
   user-select: none;
 }
 .controls-bar {
-  justify-content: center;
+  display: flex;
+  align-items: center;
 }
 .controls-bar ul {
   list-style-type: none;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
 }
 .controls-bar ul li {
   position: relative;
@@ -206,10 +226,11 @@ header .container {
 }
 /*Main Content CSS*/
 section {
-  padding-top: 30px;
+  
 }
 section .left-sidebar {
-  box-shadow: rgba(0,0,0,0.18);
+  box-shadow: 2px 2px 8px 2px rgb(0 0 0 / 18%);
+  padding-top: 30px;
 }
 @media (min-width: 991px) {
   section .left-sidebar {
@@ -257,12 +278,20 @@ section .left-sidebar {
   }
 }
 .top-ribbon {
-  background-color: #0075B0;
+  height: 40px;
+  box-shadow: 2px 2px 2px 1px rgb(0 0 0 / 20%);
 }
-.home-slider {
+.top-ribbon.anglo-light-blue {
+  background-color: var(--AngloLightBlue);
+}
+.top-ribbon.anglo-light-blue i:first-child {
+  margin-right: 16px;
+}
+.top-ribbon.anglo-light-blue i:last-child {
+  margin-left: 16px;
 }
 .my-calendar {
-  height: 40px;
+  height: 100%;
   display: inline-flex;
   justify-content: flex-end;
   align-items: center;
@@ -273,12 +302,36 @@ section .left-sidebar {
   cursor: pointer;
   user-select: none;
 }
-.my-calendar i:first-child {
-  margin-right: 16px;
+.top-ribbon.inpul-fill-bg {
+  background-color: var(--inputBoxFill);
+  margin-bottom: 27px;
 }
-.my-calendar i:last-child {
-  margin-left: 16px;
+.filter-section {
+  display: inline-flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+  color: var(--white);
+  margin-right: 152px;
 }
+
+.top-ribbon .filter-block {
+  width: 42px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--AngloDarkBlue);
+  margin-right: 30px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.top-ribbon .filter-block + i {
+  cursor: pointer;
+  user-select: none;
+}
+
 .home-slider .item {
   min-height: 225px;
   background-color: #002776;
@@ -346,4 +399,131 @@ section .left-sidebar {
 .helpdesk-wrapper h3 i {
   position: absolute;
   right: 0;
+}
+
+/*Table CSS*/
+.table {
+  margin-top: 20px;
+}
+.table thead th, .table td  {
+  border-bottom: 1px solid var(--tableBorder);
+  padding: 0 0 13px;
+  vertical-align: middle;
+}
+.table th {
+  font-size: 17px;
+  line-height: 22px;
+  color: var(--tableHeader);
+}
+.table td {
+  font-size: 15px;
+  line-height: 22px;
+  color: var(--contentGrey);
+  padding-top: 11px;
+  padding-bottom: 11px;
+}
+.task-status {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 116px;
+  height: 33px;
+  color: var(--white);
+}
+.published {
+  background-color: var(--AngloLightBlue);
+  color: var(--white);;
+}
+.under-review {
+  background-color: var(--linkRed);
+  color: var(--white);;
+}
+.approved {
+  background-color: var(--AngloDarkBlue);
+  color: var(--white);;
+}
+.archived {
+  background-color: var(--contentGrey);
+}
+.assigned-by {
+  display: flex;
+  align-items: center;
+}
+.assigned-by span {
+  width: 49px;
+  height: 49px;
+  border: 1px solid var(--outlineBlue);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--outlineBlue);
+  margin-right: 32px;
+}
+.select-box {
+  position: relative;
+  max-width: 348px;
+  margin: 22px 0;
+}
+.select-box i {
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  cursor: default;
+  user-select: none;
+  color: var(--outlineBlue);
+  pointer-events: none;
+}
+select.form-control {
+  appearance: none;
+  border-radius: 0;
+}
+.pagination-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+  line-height: 16px;
+  color: rgba(0,0,0,0.5);
+  margin-top: 45px;
+  margin-bottom: 40px;
+}
+.rows-per-page {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.pagination-wrapper select {
+  appearance: none;
+  border: 0;
+  min-width: 35px;
+  padding-left: 10px;
+}
+.pagination-wrapper select:focus {
+  outline: none;
+}
+.rows-per-page i {
+  position: absolute;
+  right: -10px;
+  top: 0px;
+  user-select: none;
+  pointer-events: none;
+  cursor: default;
+}
+.pagination-nav {
+  display: flex;
+  width: 65px;
+  align-items: center;
+  justify-content: space-between;
+}
+.pagination-nav .pagination-arrow i {
+  color: var(--tableHeader);
+  cursor: pointer;
+  user-select: none;
+}
+.pagination-arrow.prev {
+  transform: rotate(90deg);
+}
+.pagination-arrow.next {
+  transform: rotate(270deg);
 }
