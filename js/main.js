@@ -4,4 +4,7 @@ $('document').ready( function () {
     dots: true,
     arrows: false
   });
+  $('.filter-block, .close-panel').click (function () {
+    $('.slide-out-panel-right').toggleClass('show');
+  });
 });
