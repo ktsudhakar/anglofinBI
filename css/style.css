@@ -1,4 +1,4 @@
-@import '../global/global.css';
+@import './global.css';
 /*Common CSS*/
 body {
   font-family: "Segoe UI", Arial, sans-serif;
@@ -26,14 +26,12 @@ h1 {
   margin-bottom: 19px;
   color: var(--AngloDarkBlue);
 }
-
 h2 {
   font-size: 20px;
   line-height: 27px;
   color: var(--AngloDarkBlue);
   margin-bottom: 20px;
 }
-
 h3 {
   font-size: 15px;
   line-height: 18px;
@@ -54,7 +52,6 @@ h6 {
   margin-bottom: 5px;
   margin-top: 6px;
 }
-
 .mt-30 {
   margin-top: 30px;
 }
@@ -102,6 +99,28 @@ button.close i {
   padding: 0 !important;
   margin: 0 !important;
 }
+.ms-BasePicker-text {
+  border: 1px solid var(--outlineBlue);
+  height: 43px;
+  border-radius: 0;
+  padding: 6px 30px 6px 12px;
+}
+.ms-BasePicker-input {
+  height: 100%;
+}
+.error-message {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--errorMessage);
+  margin: 0;
+  padding-top: 5px;
+}
+.error-message i {
+  margin-right: 5px;
+  font-size: 15px;
+}
 /*Bootstrap Overwrite CSS*/
 .container {
   width: 100%;
@@ -137,15 +156,14 @@ button.close i {
   margin-bottom: 20px;
   position: relative;
 }
-.form-group i {
+.form-group > i {
   position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 7px;
-    cursor: default;
-    user-select: none;
-    color: var(--outlineBlue);
-    pointer-events: none;
+  bottom: 10px;
+  right: 7px;
+  cursor: default;
+  user-select: none;
+  color: var(--outlineBlue);
+  pointer-events: none;
 }
 .form-control {
   border-color: var(--outlineBlue);
@@ -161,11 +179,12 @@ button.close i {
   border-color: var(--outlineBlue);
 }
 label {
-  margin-bottom: 10px;
+  margin-bottom: 10px !important;
+  padding: 0 !important;
   font-size: 20px;
   line-height: 27px;
-  letter-spacing: 0.13px;
-  color:var(--AngloDarkBlue);
+  letter-spacing: .13px;
+  color: var(--AngloDarkBlue) !important;
 }
 .btn-submit {
   margin-top: 10px;
@@ -214,6 +233,11 @@ header .header-wrapper {
 }
 .has-search {
   width: 100%;
+}
+.has-search i {
+  position: relative;
+  bottom: inherit;
+  right: inherit;
 }
 .has-search input {
   border-left: 0;
@@ -432,7 +456,6 @@ section {
   color: var(--white);
   margin-right: 152px;
 }
-
 .top-ribbon .filter-block {
   width: 42px;
   height: 100%;
@@ -445,21 +468,17 @@ section {
   user-select: none;
   transition: all ease 0.5s;
 }
-
 .top-ribbon .filter-block:hover {
   background-color: var(--AngloLightBlue);
 }
-
 .top-ribbon .filter-block + i {
   cursor: pointer;
   user-select: none;
   transition: all ease 0.5s;
 }
-
 .top-ribbon .filter-block + i:hover {
   color: var(--AngloLightBlue);
 }
-
 .home-slider .item {
   min-height: 225px;
   background-color: #002776;
@@ -488,7 +507,6 @@ section {
 .performance-wrapper {
   margin-bottom: 30px;
 }
-
 .fill-block {
   background-color: var(--fillSolid);
   min-height: 244px;
@@ -591,12 +609,17 @@ section {
 .select-box {
   position: relative;
 }
-.select-box i {
+.input-with-icon {
+  position: relative;
+}
+.input-with-icon i {
   position: absolute;
+  bottom: 10px;
+  right: 7px;
   cursor: default;
   user-select: none;
   color: var(--outlineBlue);
-  pointer-events: none;
+  pointer-events: none
 }
 .sort-task {
   max-width: 348px;
@@ -688,7 +711,7 @@ label.sub-label {
 .calendar-box input {
   padding-right: 45px;
 }
-.calendar-box i {
+.calendar-box .form-group > i {
   right: 20px;
 }
 
@@ -827,4 +850,24 @@ p.small {
 }
 .slide-out-panel-right .file-size {
   display: inline-block;
+}
+.drop-container {
+  margin-bottom: 20px;
+}
+.dropZoneContainer {
+  width: 100%;
+  background-color: var(--fillSolid);
+  height: 100px;
+  border: 2px dashed var(--outlineBlue);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dropZoneContainer p {
+  color: var(--contentGrey);
+  font-weight: 600;
+  opacity: 0.3;
+  font-size: 18px;
+  margin: 0;
 }

@@ -47,7 +47,8 @@
                   <option value="2">Two</option>
                   <option value="3">Three</option>
                 </select>
-                <span class="select-arrow"><i class="material-icons">keyboard_arrow_down</i></span>
+                <span class="select-arrow"><i class="material-icons">keyboard_arrow_down</i>
+                </div></span>
                 <div class="col p-0 input-group-append">
                   <button class="btn btn-primary" type="button">Search</button>
                 </div>
@@ -62,7 +63,6 @@
                 <li><a href="javascript:void(0);"><span class="document-owner">Document Owner</span></a></li>
               </ul>
             </div>
-          </div>
         </div>
       </div>
     </div>
@@ -102,390 +102,450 @@
           <div class="my-tasks-wrapper">
             <h1>Upload a new document</h1>
             <div class="upload-document-form-wrapper">
-              <div class="form-group input-link">
-                <input class="form-control" type="text" placeholder="Default input">
-                <i class="material-icons">link</i>
-              </div>
-              <div class="form-group select-box">
-                <select class="form-control">
-                  <option value="" disabled="" selected="">Select</option>
-                  <option value="Published">Published</option>
-                  <option value="Under Review">Under Review</option>
-                  <option value="Approved">Approved</option>
-                  <option value="Archived">Archived</option>
-                </select>
-                <i class="material-icons">keyboard_arrow_down</i>
-              </div>
-              <button class="btn btn-secondary btn-submit" type="button" data-toggle="modal"
-                data-target="#DocumentModal">Upload document</button>
-            </div>
-          </div>
-
-          <!--Upload Document Bootstrap Modal Starts Here-->
-          <div class="modal fade" id="DocumentModal" tabindex="-1" role="dialog" aria-labelledby="DocumentModalTitle"
-            aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-full-width" role="document">
-              <div class="modal-content">
-                <div class="modal-title"><label class="modal-label">Complete Document Properties</label></div>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <i class="material-icons">close</i>
-                </button>
-                <div class="modal-body form-wrapper">
-                  <div class="form-group row">
-                    <div class="col col-md-6">
-                      <label>Document Title:</label>
-                      <input type="text" class="form-control" placeholder="Taxonomy_v1">
-                    </div>
-                    <div class="col col-md-6">
-                      <label>Document Description:</label>
-                      <input type="text" class="form-control" placeholder="DTP for Business Unit V1">
-                    </div>
-                  </div>
-                  <div class="form-group row">
-                    <div class="col col-md-4">
-                      <label>Select document group:</label>
-                      <div class="form-group select-box">
-                        <select class="form-control">
-                          <option value="" disabled="" selected="">Select</option>
-                          <option value="Published">Published</option>
-                          <option value="Under Review">Under Review</option>
-                          <option value="Approved">Approved</option>
-                          <option value="Archived">Archived</option>
-                        </select>
-                        <i class="material-icons">keyboard_arrow_down</i>
-                      </div>
-                    </div>
-                    <div class="col col-md-4">
-                      <label>Select document type:</label>
-                      <div class="form-group select-box">
-                        <select class="form-control">
-                          <option value="" disabled="" selected="">Select</option>
-                          <option value="Published">Published</option>
-                          <option value="Under Review">Under Review</option>
-                          <option value="Approved">Approved</option>
-                          <option value="Archived">Archived</option>
-                        </select>
-                        <i class="material-icons">keyboard_arrow_down</i>
-                      </div>
-                    </div>
-                    <div class="col col-md-4">
-                      <label>Select document level:</label>
-                      <div class="form-group select-box">
-                        <select class="form-control">
-                          <option value="" disabled="" selected="">Select</option>
-                          <option value="Published">Published</option>
-                          <option value="Under Review">Under Review</option>
-                          <option value="Approved">Approved</option>
-                          <option value="Archived">Archived</option>
-                        </select>
-                        <i class="material-icons">keyboard_arrow_down</i>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form-group row">
-                    <div class="col col-md-4">
-                      <label>Localisation:</label>
-                      <div class="form-group select-box">
-                        <select class="form-control">
-                          <option value="" disabled="" selected="">Select</option>
-                          <option value="Published">Published</option>
-                          <option value="Under Review">Under Review</option>
-                          <option value="Approved">Approved</option>
-                          <option value="Archived">Archived</option>
-                        </select>
-                        <i class="material-icons">keyboard_arrow_down</i>
-                      </div>
-                    </div>
-                    <div class="col col-md-4">
-                      <label>Business Unit:</label>
-                      <div class="form-group select-box">
-                        <select class="form-control">
-                          <option value="" disabled="" selected="">Select</option>
-                          <option value="Published">Published</option>
-                          <option value="Under Review">Under Review</option>
-                          <option value="Approved">Approved</option>
-                          <option value="Archived">Archived</option>
-                        </select>
-                        <i class="material-icons">keyboard_arrow_down</i>
-                      </div>
-                    </div>
-                    <div class="col col-md-4">
-                      <label>Language:</label>
-                      <div class="form-group select-box">
-                        <select class="form-control">
-                          <option value="" disabled="" selected="">Select</option>
-                          <option value="Published">Published</option>
-                          <option value="Under Review">Under Review</option>
-                          <option value="Approved">Approved</option>
-                          <option value="Archived">Archived</option>
-                        </select>
-                        <i class="material-icons">keyboard_arrow_down</i>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form-group row">
-                    <div class="col">
-                      <label class="header-label">Select related documents:</label>
-                    </div>
-                  </div>
-                  <div class="form-group row">
-                    <div class="col col-md-4">
-                      <label class="sub-label">Select document group:</label>
-                      <div class="form-group select-box">
-                        <select class="form-control">
-                          <option value="" disabled="" selected="">Select</option>
-                          <option value="Published">Published</option>
-                          <option value="Under Review">Under Review</option>
-                          <option value="Approved">Approved</option>
-                          <option value="Archived">Archived</option>
-                        </select>
-                        <i class="material-icons">keyboard_arrow_down</i>
-                      </div>
-                    </div>
-                    <div class="col col-md-4">
-                      <label class="sub-label">Select document type:</label>
-                      <div class="form-group select-box">
-                        <select class="form-control">
-                          <option value="" disabled="" selected="">Select</option>
-                          <option value="Published">Published</option>
-                          <option value="Under Review">Under Review</option>
-                          <option value="Approved">Approved</option>
-                          <option value="Archived">Archived</option>
-                        </select>
-                        <i class="material-icons">keyboard_arrow_down</i>
-                      </div>
-                    </div>
-                    <div class="col col-md-4">
-                      <label class="sub-label">Select document level:</label>
-                      <div class="form-group select-box">
-                        <select class="form-control">
-                          <option value="" disabled="" selected="">Select</option>
-                          <option value="Published">Published</option>
-                          <option value="Under Review">Under Review</option>
-                          <option value="Approved">Approved</option>
-                          <option value="Archived">Archived</option>
-                        </select>
-                        <i class="material-icons">keyboard_arrow_down</i>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form-group row">
-                    <div class="col">
-                      <label class="sub-label">Select document:</label>
-                      <div class="form-group select-box">
-                        <select class="form-control">
-                          <option value="" disabled="" selected="">Select</option>
-                          <option value="Published">Published</option>
-                          <option value="Under Review">Under Review</option>
-                          <option value="Approved">Approved</option>
-                          <option value="Archived">Archived</option>
-                        </select>
-                        <i class="material-icons">keyboard_arrow_down</i>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form-group row">
-                    <div class="col">
-                      <label class="modal-label">Select related documents:</label>
-                    </div>
-                  </div>
-                  <div class="form-group row">
-                    <div class="col col-md-5 calendar-box">
-                      <label>Draft: Stage 1</label>
-                      <div class="form-group">
-                        <input class="form-control" type="text" placeholder="Select date">
-                        <i class="material-icons">calendar_today</i>
-                      </div>
-                    </div>
-                    <div class="col col-md-7">
-                      <label>Select Draft 1 users:</label>
-                      <div class="form-group select-box">
-                        <select class="form-control">
-                          <option value="" disabled="" selected="">Select</option>
-                          <option value="Published">Published</option>
-                          <option value="Under Review">Under Review</option>
-                          <option value="Approved">Approved</option>
-                          <option value="Archived">Archived</option>
-                        </select>
-                        <i class="material-icons">keyboard_arrow_down</i>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form-group row">
-                    <div class="col col-md-5 calendar-box">
-                      <label>Draft: Stage 2</label>
-                      <div class="form-group">
-                        <input class="form-control" type="text" placeholder="Select date">
-                        <i class="material-icons">calendar_today</i>
-                      </div>
-                    </div>
-                    <div class="col col-md-7">
-                      <label>Select Draft 2 users:</label>
-                      <div class="form-group select-box">
-                        <select class="form-control">
-                          <option value="" disabled="" selected="">Select</option>
-                          <option value="Published">Published</option>
-                          <option value="Under Review">Under Review</option>
-                          <option value="Approved">Approved</option>
-                          <option value="Archived">Archived</option>
-                        </select>
-                        <i class="material-icons">keyboard_arrow_down</i>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form-group row">
-                    <div class="col col-md-5 calendar-box">
-                      <label>Review GSS</label>
-                      <div class="form-group">
-                        <input class="form-control" type="text" placeholder="Select date">
-                        <i class="material-icons">calendar_today</i>
-                      </div>
-                    </div>
-                    <div class="col col-md-7">
-                      <label>Select review & approval users:</label>
-                      <div class="form-group select-box">
-                        <select class="form-control">
-                          <option value="" disabled="" selected="">Select</option>
-                          <option value="Published">Published</option>
-                          <option value="Under Review">Under Review</option>
-                          <option value="Approved">Approved</option>
-                          <option value="Archived">Archived</option>
-                        </select>
-                        <i class="material-icons">keyboard_arrow_down</i>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form-group row">
-                    <div class="col col-md-5 calendar-box">
-                      <label>Review (PC)</label>
-                      <div class="form-group">
-                        <input class="form-control" type="text" placeholder="Select date">
-                        <i class="material-icons">calendar_today</i>
-                      </div>
-                    </div>
-                    <div class="col col-md-7">
-                      <label>Select review & approval users:</label>
-                      <div class="form-group select-box">
-                        <select class="form-control">
-                          <option value="" disabled="" selected="">Select</option>
-                          <option value="Published">Published</option>
-                          <option value="Under Review">Under Review</option>
-                          <option value="Approved">Approved</option>
-                          <option value="Archived">Archived</option>
-                        </select>
-                        <i class="material-icons">keyboard_arrow_down</i>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form-group row">
-                    <div class="col col-md-5 calendar-box">
-                      <label>Review (GPO)</label>
-                      <div class="form-group">
-                        <input class="form-control" type="text" placeholder="Select date">
-                        <i class="material-icons">calendar_today</i>
-                      </div>
-                    </div>
-                    <div class="col col-md-7">
-                      <label>Select review & approval users:</label>
-                      <div class="form-group select-box">
-                        <select class="form-control">
-                          <option value="" disabled="" selected="">Select</option>
-                          <option value="Published">Published</option>
-                          <option value="Under Review">Under Review</option>
-                          <option value="Approved">Approved</option>
-                          <option value="Archived">Archived</option>
-                        </select>
-                        <i class="material-icons">keyboard_arrow_down</i>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form-group row">
-                    <div class="col col-md-5 calendar-box">
-                      <label>Launch (IM)</label>
-                      <div class="form-group">
-                        <input class="form-control" type="text" placeholder="Select date">
-                        <i class="material-icons">calendar_today</i>
-                      </div>
-                    </div>
-                    <div class="col col-md-7">
-                      <label>Select Draft 1 users:</label>
-                      <div class="form-group select-box">
-                        <select class="form-control">
-                          <option value="" disabled="" selected="">Select</option>
-                          <option value="Published">Published</option>
-                          <option value="Under Review">Under Review</option>
-                          <option value="Approved">Approved</option>
-                          <option value="Archived">Archived</option>
-                        </select>
-                        <i class="material-icons">keyboard_arrow_down</i>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row text-right">
-                    <div class="col">
-                      <button type="button" class="btn btn-secondary btn-submit">Submit</button>
-                    </div>
-                  </div>
+              <div class="form-group">
+                <label>Source document url</label>
+                <div class="input-with-icon input-link">
+                  <input class="form-control" type="text" placeholder="Source document url" />
+                  <i class="material-icons">link</i>
                 </div>
+                <p class="error-message">
+                  <i class="material-icons">error_outline</i>
+                  <span>Required Field</span>
+                </p>
               </div>
-            </div>
-          </div>
-          <!--Upload Document Bootstrap Modal Ends Here-->
-
-          <!--Right SidePanel SlideOut Starts Here-->
-          <div class="slide-out-panel-right">
-            <div class="close-bar">
-              <span class="close-panel">
-                <i class="material-icons">close</i>
-              </span>
-            </div>
-            <div class="fill-box-seperator"></div>
-            <div class="slide-panel-content">
-              <h5>Has access</h5>
-              <h5>User Groups</h5>
-              <h6>Global Process Owner</h6>
-              <p class="small">Task Manager</p>
-              <p class="small">Owner</p>
-              <h6>Process Champion</h6>
-              <p class="small">Reviewer</p>
-              <p class="small">Contributor</p>
-              <h6>Information Management</h6>
-              <p class="small">Approver</p>
-              <button class="btn btn-secondary btn-maintain" type="button">Maintain</button>
-              <div class="fill-box-seperator"></div>
-              <h5>Properties</h5>
-              <p>Document Authour: Jim Pateman </p>
-              <p>Document Group: Process Document</p>
-              <p>Level: 1</p>
-              <p>Business Unit:</p>
-              <p>Localisation: </p>
-              <p>Applicable Roles:</p>
-              <p>Document Link<span class="copy-text"><i class="material-icons">content_copy</i></span></p>
-              <h5 class="mt-40">Related Documents</h5>
-              <ul class="related-document">
-                <li><i class="material-icons">description</i><a href="javascript:void(0);">Policy document.ext</a> </li>
-                <li><i class="material-icons">description</i><a href="javascript:void(0);">Process Manual.ext</a> </li>
-                <li><i class="material-icons">description</i><a href="javascript:void(0);">Desktop Procedure.ext</a> </li>
-              </ul>
-              <h5 class="activity-notification">Activity<i class="material-icons">notifications_none</i></h5>
-              <h5 class="doc-status-title"><span>Document Status:</span> <span>Published</span></h5>
-              <div class="document-user-block">
-                <div class="row user-block">
-                  <div class="col user-icon"><span>RD</span></div>
-                  <div class="user-name">Richard Daniel</div>
+              <div class="form-group">
+                <label>Select source system</label>
+                <div class="input-with-icon select-box">
+                  <select class="form-control" id="sor-task">
+                    <option value="" disabled selected> Select source system</option>
+                    <option value="Aris">Aris</option>
+                    <option value="Eureka">Eureka</option>
+                    <option value="WDesk">SAP EN</option>
+                    <option value="WDesk">Success Factors</option>
+                    <option value="WDesk">WDesk</option>
+                    <option value="Other">Other</option>
+                  </select>
+                  <i class="material-icons">keyboard_arrow_down</i>
                 </div>
-                <p class="edit-status">Document edited</p>
-                <p class="edit-date">10 February 2022</p>
-                <p class="edit-name">Richard Daniel has edited Policy Document.</p>
-                <p class="file-size">Size: <span>3mb</span></p>
+                <p class="error-message">
+                  <i class="material-icons">error_outline</i>
+                  <span>Required Field</span>
+                </p>
               </div>
             </div>
+            <button class="btn btn-secondary btn-submit" type="button" data-toggle="modal" data-target="#DocumentModal">Upload document</button>
           </div>
-          <!--Right SidePanel SlideOut Ends Here-->
         </div>
       </div>
-    </div>
+
+      <!--Upload Document Bootstrap Modal Starts Here-->
+      <div class="modal fade" id="DocumentModal" tabindex="-1" role="dialog" aria-labelledby="DocumentModalTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-full-width" role="document">
+          <div class="modal-content">
+            <div class="modal-title"><label class="modal-label">Complete Document Properties</label></div>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <i class="material-icons">close</i>
+            </button>
+            <div class="modal-body form-wrapper">
+              <div class="form-group row">
+                <div class="col col-md-6">
+                  <label>Document Title:</label>
+                  <input type="text" class="form-control" placeholder="Taxonomy_v1">
+                </div>
+                <div class="col col-md-6">
+                  <label>Document Description:</label>
+                  <input type="text" class="form-control" placeholder="DTP for Business Unit V1">
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col col-md-4">
+                  <div class="form-group">
+                    <label>Select document group:</label>
+                    <div class="input-with-icon select-box">  
+                      <select class="form-control">
+                        <option value="" disabled="" selected="">Select</option>
+                        <option value="Published">Published</option>
+                        <option value="Under Review">Under Review</option>
+                        <option value="Approved">Approved</option>
+                        <option value="Archived">Archived</option>
+                      </select>
+                      <i class="material-icons">keyboard_arrow_down</i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col col-md-4">
+                  <div class="form-group">
+                    <label>Select document type:</label>
+                    <div class="input-with-icon select-box">  
+                      <select class="form-control">
+                        <option value="" disabled="" selected="">Select</option>
+                        <option value="Published">Published</option>
+                        <option value="Under Review">Under Review</option>
+                        <option value="Approved">Approved</option>
+                        <option value="Archived">Archived</option>
+                      </select>
+                      <i class="material-icons">keyboard_arrow_down</i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col col-md-4">
+                  <div class="form-group">
+                    <label>Select document level:</label>
+                    <div class="input-with-icon select-box">  
+                      <select class="form-control">
+                        <option value="" disabled="" selected="">Select</option>
+                        <option value="Published">Published</option>
+                        <option value="Under Review">Under Review</option>
+                        <option value="Approved">Approved</option>
+                        <option value="Archived">Archived</option>
+                      </select>
+                      <i class="material-icons">keyboard_arrow_down</i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col col-md-4">
+                  <div class="form-group">
+                    <label>Localisation:</label>
+                    <div class="input-with-icon select-box">  
+                      <select class="form-control">
+                        <option value="" disabled="" selected="">Select</option>
+                        <option value="Published">Published</option>
+                        <option value="Under Review">Under Review</option>
+                        <option value="Approved">Approved</option>
+                        <option value="Archived">Archived</option>
+                      </select>
+                      <i class="material-icons">keyboard_arrow_down</i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col col-md-4">
+                  <div class="form-group">
+                    <label>Business Unit:</label>
+                    <div class="input-with-icon select-box">  
+                      <select class="form-control">
+                        <option value="" disabled="" selected="">Select</option>
+                        <option value="Published">Published</option>
+                        <option value="Under Review">Under Review</option>
+                        <option value="Approved">Approved</option>
+                        <option value="Archived">Archived</option>
+                      </select>
+                      <i class="material-icons">keyboard_arrow_down</i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col col-md-4">
+                  <div class="form-group">
+                    <label>Language:</label>
+                    <div class="input-with-icon select-box">  
+                      <select class="form-control">
+                        <option value="" disabled="" selected="">Select</option>
+                        <option value="Published">Published</option>
+                        <option value="Under Review">Under Review</option>
+                        <option value="Approved">Approved</option>
+                        <option value="Archived">Archived</option>
+                      </select>
+                      <i class="material-icons">keyboard_arrow_down</i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col">
+                  <label class="header-label">Select related documents:</label>
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col col-md-4">
+                  <label class="sub-label">Select document group:</label>
+                  <div class="form-group">
+                    <div class="input-with-icon select-box">  
+                      <select class="form-control">
+                        <option value="" disabled="" selected="">Select</option>
+                        <option value="Published">Published</option>
+                        <option value="Under Review">Under Review</option>
+                        <option value="Approved">Approved</option>
+                        <option value="Archived">Archived</option>
+                      </select>
+                      <i class="material-icons">keyboard_arrow_down</i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col col-md-4">
+                  <label class="sub-label">Select document type:</label>
+                  <div class="form-group">
+                    <div class="input-with-icon select-box">  
+                      <select class="form-control">
+                        <option value="" disabled="" selected="">Select</option>
+                        <option value="Published">Published</option>
+                        <option value="Under Review">Under Review</option>
+                        <option value="Approved">Approved</option>
+                        <option value="Archived">Archived</option>
+                      </select>
+                      <i class="material-icons">keyboard_arrow_down</i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col col-md-4">
+                  <label class="sub-label">Select document level:</label>
+                  <div class="form-group">
+                    <div class="input-with-icon select-box">  
+                      <select class="form-control">
+                        <option value="" disabled="" selected="">Select</option>
+                        <option value="Published">Published</option>
+                        <option value="Under Review">Under Review</option>
+                        <option value="Approved">Approved</option>
+                        <option value="Archived">Archived</option>
+                      </select>
+                      <i class="material-icons">keyboard_arrow_down</i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col">
+                  <label class="sub-label">Select document:</label>
+                  <div class="form-group">
+                    <div class="input-with-icon select-box">  
+                      <select class="form-control">
+                        <option value="" disabled="" selected="">Select</option>
+                        <option value="Published">Published</option>
+                        <option value="Under Review">Under Review</option>
+                        <option value="Approved">Approved</option>
+                        <option value="Archived">Archived</option>
+                      </select>
+                      <i class="material-icons">keyboard_arrow_down</i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col">
+                  <label class="modal-label">Select related documents:</label>
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col col-md-5">
+                  <div class="form-group">
+                    <label>Draft: Stage 1</label>
+                      <div class="input-with-icon calendar-box">
+                      <input class="form-control" type="text" placeholder="Select date">
+                      <i class="material-icons">calendar_today</i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col col-md-7">
+                  <div class="form-group">
+                    <label>Select Draft 1 users:</label>
+                    <div class="input-with-icon select-box">  
+                      <select class="form-control">
+                        <option value="" disabled="" selected="">Select</option>
+                        <option value="Published">Published</option>
+                        <option value="Under Review">Under Review</option>
+                        <option value="Approved">Approved</option>
+                        <option value="Archived">Archived</option>
+                      </select>
+                      <i class="material-icons">keyboard_arrow_down</i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col col-md-5">
+                  <div class="form-group">
+                    <label>Draft: Stage 2</label>
+                      <div class="input-with-icon calendar-box">
+                      <input class="form-control" type="text" placeholder="Select date">
+                      <i class="material-icons">calendar_today</i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col col-md-7">
+                  <div class="form-group">
+                    <label>Select Draft 2 users:</label>
+                    <div class="input-with-icon select-box">  
+                      <select class="form-control">
+                        <option value="" disabled="" selected="">Select</option>
+                        <option value="Published">Published</option>
+                        <option value="Under Review">Under Review</option>
+                        <option value="Approved">Approved</option>
+                        <option value="Archived">Archived</option>
+                      </select>
+                      <i class="material-icons">keyboard_arrow_down</i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col col-md-5">
+                  <div class="form-group">
+                    <label>Review GSS</label>
+                      <div class="input-with-icon calendar-box">
+                      <input class="form-control" type="text" placeholder="Select date">
+                      <i class="material-icons">calendar_today</i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col col-md-7">
+                  <div class="form-group">
+                    <label>Select review & approval users:</label>
+                    <div class="input-with-icon select-box">  
+                      <select class="form-control">
+                        <option value="" disabled="" selected="">Select</option>
+                        <option value="Published">Published</option>
+                        <option value="Under Review">Under Review</option>
+                        <option value="Approved">Approved</option>
+                        <option value="Archived">Archived</option>
+                      </select>
+                      <i class="material-icons">keyboard_arrow_down</i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col col-md-5">
+                  <div class="form-group">
+                    <label>Review (PC)</label>
+                      <div class="input-with-icon calendar-box">
+                      <input class="form-control" type="text" placeholder="Select date">
+                      <i class="material-icons">calendar_today</i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col col-md-7">
+                  <div class="form-group">
+                    <label>Select review & approval users:</label>
+                    <div class="input-with-icon select-box">  
+                      <select class="form-control">
+                        <option value="" disabled="" selected="">Select</option>
+                        <option value="Published">Published</option>
+                        <option value="Under Review">Under Review</option>
+                        <option value="Approved">Approved</option>
+                        <option value="Archived">Archived</option>
+                      </select>
+                      <i class="material-icons">keyboard_arrow_down</i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col col-md-5">
+                  <div class="form-group">
+                    <label>Review (GPO)</label>
+                      <div class="input-with-icon calendar-box">
+                      <input class="form-control" type="text" placeholder="Select date">
+                      <i class="material-icons">calendar_today</i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col col-md-7">
+                  <div class="form-group">
+                    <label>Select review & approval users:</label>
+                    <div class="input-with-icon select-box">  
+                      <select class="form-control">
+                        <option value="" disabled="" selected="">Select</option>
+                        <option value="Published">Published</option>
+                        <option value="Under Review">Under Review</option>
+                        <option value="Approved">Approved</option>
+                        <option value="Archived">Archived</option>
+                      </select>
+                      <i class="material-icons">keyboard_arrow_down</i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col col-md-5">
+                  <div class="form-group">
+                    <label>Launch (IM)</label>
+                      <div class="input-with-icon calendar-box">
+                      <input class="form-control" type="text" placeholder="Select date">
+                      <i class="material-icons">calendar_today</i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col col-md-7">
+                  <div class="form-group">
+                    <label>Select Draft 1 users:</label>
+                    <div class="input-with-icon select-box">  
+                      <select class="form-control">
+                        <option value="" disabled="" selected="">Select</option>
+                        <option value="Published">Published</option>
+                        <option value="Under Review">Under Review</option>
+                        <option value="Approved">Approved</option>
+                        <option value="Archived">Archived</option>
+                      </select>
+                      <i class="material-icons">keyboard_arrow_down</i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row text-right">
+                <div class="col">
+                  <button type="button" class="btn btn-secondary btn-submit">Submit</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Upload Document Bootstrap Modal Ends Here-->
+
+      <!--Right SidePanel SlideOut Starts Here-->
+      <div class="slide-out-panel-right">
+        <div class="close-bar">
+          <span class="close-panel">
+            <i class="material-icons">close</i>
+          </span>
+        </div>
+        <div class="fill-box-seperator"></div>
+        <div class="slide-panel-content">
+          <h5>Has access</h5>
+          <h5>User Groups</h5>
+          <h6>Global Process Owner</h6>
+          <p class="small">Task Manager</p>
+          <p class="small">Owner</p>
+          <h6>Process Champion</h6>
+          <p class="small">Reviewer</p>
+          <p class="small">Contributor</p>
+          <h6>Information Management</h6>
+          <p class="small">Approver</p>
+          <button class="btn btn-secondary btn-maintain" type="button">Maintain</button>
+          <div class="fill-box-seperator"></div>
+          <h5>Properties</h5>
+          <p>Document Authour: Jim Pateman </p>
+          <p>Document Group: Process Document</p>
+          <p>Level: 1</p>
+          <p>Business Unit:</p>
+          <p>Localisation: </p>
+          <p>Applicable Roles:</p>
+          <p>Document Link<span class="copy-text"><i class="material-icons">content_copy</i></span></p>
+          <h5 class="mt-40">Related Documents</h5>
+          <ul class="related-document">
+            <li><i class="material-icons">description</i><a href="javascript:void(0);">Policy document.ext</a> </li>
+            <li><i class="material-icons">description</i><a href="javascript:void(0);">Process Manual.ext</a> </li>
+            <li><i class="material-icons">description</i><a href="javascript:void(0);">Desktop Procedure.ext</a> </li>
+          </ul>
+          <h5 class="activity-notification">Activity<i class="material-icons">notifications_none</i></h5>
+          <h5 class="doc-status-title"><span>Document Status:</span> <span>Published</span></h5>
+          <div class="document-user-block">
+            <div class="row user-block">
+              <div class="col user-icon"><span>RD</span></div>
+              <div class="user-name">Richard Daniel</div>
+            </div>
+            <p class="edit-status">Document edited</p>
+            <p class="edit-date">10 February 2022</p>
+            <p class="edit-name">Richard Daniel has edited Policy Document.</p>
+            <p class="file-size">Size: <span>3mb</span></p>
+          </div>
+        </div>
+      </div>
+      <!--Right SidePanel SlideOut Ends Here-->
+      </div>
   </div>
+  
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
