@@ -1,4 +1,4 @@
-@import '/global/global.css';
+@import '../global/global.css';
 /*Common CSS*/
 body {
   font-family: "Segoe UI", Arial, sans-serif;
