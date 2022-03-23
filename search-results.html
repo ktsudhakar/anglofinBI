@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <!--Slick Slider CSS-->
+    <link rel="stylesheet" type="text/css" href="https://kenwheeler.github.io/slick/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://kenwheeler.github.io/slick/slick/slick-theme.css"/>
+
+    <!--Custom CSS-->
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>AngloAmerican</title>
+  </head>
+  <body>
+    <!--Header-->
+    <header>
+      <div class="container-fluid header-wrapper">
+        <div class="row">
+          <div class="col-md-3 left-sidebar header-left pr-0">
+            <div class="row align-items-center">
+              <div class="col menu-circle"><a href="javascript:void:(0);"><img src="images/group.png" /></a></div>
+              <div class="col top-logo"><a href="index.html"><img src="images/logo.svg" /></a></div>
+            </div>
+          </div>
+          <div class="col header-right">
+              <div class="row">
+                <div class="col-3 finance-label">Finance BI<br/> Data Management Solution</div>
+                <div class="col search-bar">
+                  <div class="input-group row m-0">
+                    <div class="form-group col-6 has-search mb-0 p-0 d-flex">
+                      <i class="material-icons top-search">search</i>
+                      <input type="text" class="form-control" placeholder="Enter your search here">
+                    </div>
+                    <select class="col-6 form-control" id="search">
+                      <option value ="" disabled selected>Refine your search</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                    <span class="select-arrow"><i class="material-icons">keyboard_arrow_down</i></span>
+                    <div class="col p-0 input-group-append">
+                      <button class="btn btn-primary" type="button">Search</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-3 controls-bar">
+                  <ul>
+                    <li><a href="javascript:void(0);"><i class="material-icons">notifications</i></a><span class="notification-count">4</span></li>
+                    <li><a href="javascript:void(0);"><i class="material-icons">settings</i></a></li>
+                    <li><a href="javascript:void(0);"><span class="help">?</span></a></li>
+                    <li><a href="javascript:void(0);"><span class="document-owner">Document Owner</span></a></li>
+                  </ul>
+                </div>
+              </div>
+          </div>
+      </div>
+      </div>
+    </header>
+
+    <!--Main Content-->
+    <div class="main-content-wrapper">
+      <div class="container-fluid">
+        <div class="row">
+
+          <!--Main Content Left Sidebar-->
+          <div class="col-md-3 left-sidebar">
+            <ul class="menu-container">
+              <li class="menu-items menu-home"><a href="index.html"><i class="material-icons">home_filled</i>Home</a> </li>
+              <li class="menu-items create"><a href="javascript:void(0);"><i class="material-icons">add</i>Create</a> </li>
+              <li class="menu-items menu-docs"><a href="javascript:void(0);"><i class="material-icons">folder_shared</i>My Documents</a> </li>
+              <li class="menu-items menu-latest-docs"><a href="javascript:void(0);"><i class="material-icons">system_update_alt</i>Latest Documents</a> </li>
+              <li class="menu-items menu-recent-updates"><a href="javascript:void(0);"><i class="material-icons">update</i>Recently Updated</a> </li>
+              <li class="menu-items menu-my-tasks"><a href="my-tasks.html"><i class="material-icons">add_task</i>My Tasks</a> </li>
+            </ul>
+          </div>
+
+          <!--Main Content Section-->
+          <div class="col main-content mt-30">
+            <div class="my-tasks-wrapper">
+              <h1>Search results: Process Maps Level 5</h1>
+              <div class="row sort-group">
+                <div class="form-group">
+                  <div class="input-with-icon select-box select-dark-blue">
+                    <select class="form-control" id="sor-task">
+                      <option value ="" disabled selected="">Document Name</option>
+                      <option value="Published">Published</option>
+                      <option value="Under Review">Under Review</option>
+                      <option value="Approved">Approved</option>
+                      <option value="Archived">Archived</option>
+                    </select>
+                    <i class="material-icons">keyboard_arrow_down</i>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <span class="sort-icon"><i class="material-icons">sort</i></span>
+                </div>
+              </div>
+              <table class="table search-result-table">
+                <thead>
+                  <tr>
+                    <th>
+                      <div class="input-with-icon select-box">
+                        <select class="form-control" id="sor-task">
+                          <option value ="" disabled selected="">Published</option>
+                          <option value="Published">Published</option>
+                          <option value="Under Review">Under Review</option>
+                          <option value="Approved">Approved</option>
+                          <option value="Archived">Archived</option>
+                        </select>
+                        <i class="material-icons">keyboard_arrow_down</i>
+                      </div>
+                    </th>
+                    <th>
+                      <div class="input-with-icon select-box">
+                        <select class="form-control" id="sor-task">
+                          <option value ="" disabled selected="">Document Type</option>
+                          <option value="Published">Published</option>
+                          <option value="Under Review">Under Review</option>
+                          <option value="Approved">Approved</option>
+                          <option value="Archived">Archived</option>
+                        </select>
+                        <i class="material-icons">keyboard_arrow_down</i>
+                      </div>
+                    </th>
+                    <th>
+                      <div class="input-with-icon select-box">
+                        <select class="form-control" id="sor-task">
+                          <option value ="" disabled selected="">Status</option>
+                          <option value="Published">Published</option>
+                          <option value="Under Review">Under Review</option>
+                          <option value="Approved">Approved</option>
+                          <option value="Archived">Archived</option>
+                        </select>
+                        <i class="material-icons">keyboard_arrow_down</i>
+                      </div>
+                    </th>
+                    <th>
+                      <div class="input-with-icon select-box">
+                        <select class="form-control" id="sor-task">
+                          <option value ="" disabled selected="">Document Level</option>
+                          <option value="Published">Published</option>
+                          <option value="Under Review">Under Review</option>
+                          <option value="Approved">Approved</option>
+                          <option value="Archived">Archived</option>
+                        </select>
+                        <i class="material-icons">keyboard_arrow_down</i>
+                      </div>
+                    </th>
+                    <th>
+                      <div class="input-with-icon select-box">
+                        <select class="form-control" id="sor-task">
+                          <option value ="" disabled selected="">Document Author</option>
+                          <option value="Published">Published</option>
+                          <option value="Under Review">Under Review</option>
+                          <option value="Approved">Approved</option>
+                          <option value="Archived">Archived</option>
+                        </select>
+                        <i class="material-icons">keyboard_arrow_down</i>
+                      </div>
+                    </th>
+                    <th>
+                      <div class="input-with-icon select-box">
+                        <select class="form-control" id="sor-task">
+                          <option value ="" disabled selected="">Published</option>
+                          <option value="Published">Published</option>
+                          <option value="Under Review">Under Review</option>
+                          <option value="Approved">Approved</option>
+                          <option value="Archived">Archived</option>
+                        </select>
+                        <i class="material-icons ">keyboard_arrow_down</i>
+                      </div>
+                    </th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Taxonomy Document</td>
+                    <td>Taxonomy</td>
+                    <td>Published</td>
+                    <td>Level 0</td>
+                    <td>Jana Middleton</td>
+                    <td>11 January 2022</td>
+                    <td><i class="material-icons color-outline-blue">error_outline</i></td>
+                  </tr>
+                  <tr>
+                    <td>Taxonomy Document</td>
+                    <td>Taxonomy</td>
+                    <td>Published</td>
+                    <td>Level 0</td>
+                    <td>Jana Middleton</td>
+                    <td>11 January 2022</td>
+                    <td><i class="material-icons color-outline-blue">error_outline</i></td>
+                  </tr>
+                  <tr>
+                    <td>Taxonomy Document</td>
+                    <td>Taxonomy</td>
+                    <td>Published</td>
+                    <td>Level 0</td>
+                    <td>Jana Middleton</td>
+                    <td>11 January 2022</td>
+                    <td><i class="material-icons color-outline-blue">error_outline</i></td>
+                  </tr>
+                  <tr>
+                    <td>Taxonomy Document</td>
+                    <td>Taxonomy</td>
+                    <td>Published</td>
+                    <td>Level 0</td>
+                    <td>Jana Middleton</td>
+                    <td>11 January 2022</td>
+                    <td><i class="material-icons color-outline-blue">error_outline</i></td>
+                  </tr>
+                  <tr>
+                    <td>Taxonomy Document</td>
+                    <td>Taxonomy</td>
+                    <td>Published</td>
+                    <td>Level 0</td>
+                    <td>Jana Middleton</td>
+                    <td>11 January 2022</td>
+                    <td><i class="material-icons color-outline-blue">error_outline</i></td>
+                  </tr>
+                  <tr>
+                    <td>Taxonomy Document</td>
+                    <td>Taxonomy</td>
+                    <td>Published</td>
+                    <td>Level 0</td>
+                    <td>Jana Middleton</td>
+                    <td>11 January 2022</td>
+                    <td><i class="material-icons color-outline-blue">error_outline</i></td>
+                  </tr>
+                  <tr>
+                    <td>Taxonomy Document</td>
+                    <td>Taxonomy</td>
+                    <td>Published</td>
+                    <td>Level 0</td>
+                    <td>Jana Middleton</td>
+                    <td>11 January 2022</td>
+                    <td><i class="material-icons color-outline-blue">error_outline</i></td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="row justify-content-end mt-40">
+                <div class="col-md-auto">
+                  <button type="button" class="btn btn-secondary">Discover all documents</button>
+                </div>
+              </div>
+              <div class="pagination-wrapper mt-150">
+                <div class="rows-per-page">
+                  <span>Rows per page: </span>
+                  <select class="pagination-rows" id="sor-task">
+                    <option selected="">1</option>
+                    <option value="">2</option>
+                    <option value="">3</option>
+                    <option value="">4</option>
+                    <option value="">5</option>
+                    <option value="">6</option>
+                    <option value="">7</option>
+                    <option value="">8</option>
+                    <option value="">9</option>
+                    <option value="">10</option>
+                    <option value="">11</option>
+                    <option value="">12</option>
+                    <option value="">13</option>
+                    <option value="">14</option>
+                    <option value="">15</option>
+                  </select>
+                  <i class="material-icons">arrow_drop_down</i>
+                </div>
+                <div class="total-item-count"><span class="from-count">1</span> - <span class="to-count">15</span> of <span class="total-count">154</span></div>
+                <div class="pagination-nav">
+                  <div class="pagination-arrow prev" title="Previous"><i class="material-icons">keyboard_arrow_down</i></div>
+                  <div class="pagination-arrow next" title="Next"><i class="material-icons">keyboard_arrow_down</i></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://kenwheeler.github.io/slick/slick/slick.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+  </body>
+</html>
